@@ -1,0 +1,10 @@
+flask
+psycopg2-binary
+requests
+flasgger
+google-api-python-client
+youtube-comment-downloader
+pandas
+nltk
+emoji
+joblib
