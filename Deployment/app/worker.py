@@ -19,7 +19,8 @@ tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
 #nltk.download('stopwords')
 
 # Config
-API_KEY = "AIzaSyDf8yjSbfbAsXHRox1UNxiKPWArm9SbbwI"
+#API_KEY = "z"
+API_KEY = "z"
 DB_CONFIG = {
         "host": "192.168.88.254",
         "database": "Ytscraper",
