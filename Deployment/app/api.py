@@ -16,8 +16,8 @@ db_config = {
     "port": "15015"
 }
 
-API_KEY = 'AIzaSyDf8yjSbfbAsXHRox1UNxiKPWArm9SbbwI'  # Replace with your YouTube API key
-
+#API_KEY = "AIzaSyDv15JM8g7YrxQNyXPoM4TtVAF1EopZESs"  # Replace with your YouTube API key
+API_KEY = "AIzaSyAze1_fqQ3aqqSrup2BVEa9fup5grGih6k"
 def get_db_connection():
     return psycopg2.connect(**db_config)
 
@@ -68,10 +68,10 @@ def manage_channel():
         if request.method == 'POST':
             # Add channel
             cursor.execute("""
-                INSERT INTO youtube_channels (channel_id)
-                VALUES (%s)
+                INSERT INTO youtube_channels (channel_id, channel_name)
+                VALUES (%s, %s)
                 ON CONFLICT (channel_id) DO NOTHING
-            """, (channel_id,))
+            """, (channel_id,'nan'))
             conn.commit()
             return jsonify({"message": f"Channel ID {channel_id} added"}), 200
         
