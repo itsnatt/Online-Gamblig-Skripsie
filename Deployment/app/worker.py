@@ -10,9 +10,20 @@ from nltk.corpus import stopwords
 import nltk
 import time
 
+
 import joblib
-model = joblib.load('svm_model.pkl')
-tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
+import numpy as np
+
+# --- Load semua model dan vectorizer ---
+tfidf_vectorizer = joblib.load('Model-gambling/tfidf_vectorizer.joblib')
+
+models = {
+    "NaiveBayes": joblib.load('Model-gambling/Naive Bayes.joblib'),
+    "SVM": joblib.load('Model-gambling/SVM.joblib'),
+    "RandomForest": joblib.load('Model-gambling/Random Forest.joblib'),
+    "KNN": joblib.load('Model-gambling/KNN.joblib'),
+    "LogReg": joblib.load('Model-gambling/Logistic Regression.joblib')
+}
 
 # --- Inisialisasi ---
 #nltk.download('punkt')
@@ -20,7 +31,8 @@ tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 # Config
 #API_KEY = "z"
-API_KEY = "z"
+#API_KEY = "z"
+API_KEY =  "z"
 DB_CONFIG = {
         "host": "192.168.88.254",
         "database": "Ytscraper",
@@ -158,17 +170,30 @@ def preprocess_comments(comments):
     
     return df.to_dict('records')
 
+
 def predict_gambling_comments(comments):
     if not comments:
         return comments
 
     texts = [comment['cleaned_text'] for comment in comments]
     texts_tfidf = tfidf_vectorizer.transform(texts)
-    predictions = model.predict(texts_tfidf)
-    for comment, pred in zip(comments, predictions):
-        comment['is_gambling_promo'] = bool(pred) 
+
+    # Ambil prediksi dari semua model
+    predictions_all = []
+    for model_name, model in models.items():
+        preds = model.predict(texts_tfidf)
+        predictions_all.append(preds)
+
+    # Voting: mayoritas 1 -> True, mayoritas 0 -> False
+    predictions_all = np.array(predictions_all)  # shape: (5_models, N_komentar)
+    votes = np.round(np.mean(predictions_all, axis=0)).astype(int)  # Hasil voting mayoritas
+
+    for comment, pred in zip(comments, votes):
+        comment['is_gambling_promo'] = bool(pred)
 
     return comments
+
+
 
 
 def save_to_database(video_id, video_details, comments):
