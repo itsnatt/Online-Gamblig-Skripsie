@@ -1,0 +1,16 @@
+jupyterlab
+ipykernel
+nbconvert
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+wordcloud
+nltk
+emoji
+joblib
+kagglehub
+youtube-comment-downloader
+google-api-python-client
+pyarrow

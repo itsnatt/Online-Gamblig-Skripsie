@@ -1,0 +1,205 @@
+{
+  "dibuat": "2026-10-27T15:44:40",
+  "dataset": "kaggle: yaemico/judionline",
+  "kolom_teks": "komentar -> clean_text()",
+  "catatan_penting": "Pipeline menerima teks yang SUDAH dibersihkan dengan clean_text() yang sama.",
+  "jumlah_data": {
+    "awal": 10230,
+    "setelah_dedup": 8624,
+    "train_sebelum_balancing": 6899,
+    "train_setelah_balancing": 4312,
+    "test": 1725,
+    "test_distribusi_label": {
+      "0": 1186,
+      "1": 539
+    }
+  },
+  "vectorizer": {
+    "jenis": "TfidfVectorizer",
+    "max_features": 5000
+  },
+  "parameter_model": {
+    "Naive Bayes": {
+      "alpha": "1.0",
+      "class_prior": "None",
+      "fit_prior": "True",
+      "force_alpha": "True"
+    },
+    "SVM": {
+      "cv": "None",
+      "ensemble": "False",
+      "estimator__C": "1.0",
+      "estimator__break_ties": "False",
+      "estimator__cache_size": "200",
+      "estimator__class_weight": "None",
+      "estimator__coef0": "0.0",
+      "estimator__decision_function_shape": "ovr",
+      "estimator__degree": "3",
+      "estimator__gamma": "scale",
+      "estimator__kernel": "rbf",
+      "estimator__max_iter": "-1",
+      "estimator__probability": "deprecated",
+      "estimator__random_state": "42",
+      "estimator__shrinking": "True",
+      "estimator__tol": "0.001",
+      "estimator__verbose": "False",
+      "estimator": "SVC(random_state=42)",
+      "method": "sigmoid",
+      "n_jobs": "None"
+    },
+    "Random Forest": {
+      "bootstrap": "True",
+      "ccp_alpha": "0.0",
+      "class_weight": "None",
+      "criterion": "gini",
+      "max_depth": "None",
+      "max_features": "sqrt",
+      "max_leaf_nodes": "None",
+      "max_samples": "None",
+      "min_impurity_decrease": "0.0",
+      "min_samples_leaf": "1",
+      "min_samples_split": "5",
+      "min_weight_fraction_leaf": "0.0",
+      "monotonic_cst": "None",
+      "n_estimators": "100",
+      "n_jobs": "-1",
+      "oob_score": "False",
+      "random_state": "42",
+      "verbose": "0",
+      "warm_start": "False"
+    },
+    "KNN": {
+      "algorithm": "auto",
+      "leaf_size": "30",
+      "metric": "minkowski",
+      "metric_params": "None",
+      "n_jobs": "None",
+      "n_neighbors": "5",
+      "p": "2",
+      "weights": "uniform"
+    },
+    "Logistic Regression": {
+      "C": "1.0",
+      "class_weight": "None",
+      "dual": "False",
+      "fit_intercept": "True",
+      "intercept_scaling": "1",
+      "l1_ratio": "0.0",
+      "max_iter": "1000",
+      "n_jobs": "None",
+      "penalty": "deprecated",
+      "random_state": "None",
+      "solver": "lbfgs",
+      "tol": "0.0001",
+      "verbose": "0",
+      "warm_start": "False"
+    }
+  },
+  "metrik_uji": {
+    "Naive Bayes": {
+      "CV F1 (mean)": 0.9294,
+      "CV F1 (std)": 0.0091,
+      "Accuracy": 0.9032,
+      "Precision": 0.7665,
+      "Recall": 0.9926,
+      "F1": 0.865,
+      "ROC-AUC": 0.9943,
+      "Waktu training (s)": 0.0385
+    },
+    "SVM": {
+      "CV F1 (mean)": 0.9758,
+      "CV F1 (std)": 0.0024,
+      "Accuracy": 0.9751,
+      "Precision": 0.9444,
+      "Recall": 0.9777,
+      "F1": 0.9608,
+      "ROC-AUC": 0.9963,
+      "Waktu training (s)": 4.7789
+    },
+    "Random Forest": {
+      "CV F1 (mean)": 0.9741,
+      "CV F1 (std)": 0.0045,
+      "Accuracy": 0.9751,
+      "Precision": 0.9542,
+      "Recall": 0.9666,
+      "F1": 0.9604,
+      "ROC-AUC": 0.995,
+      "Waktu training (s)": 5.9383
+    },
+    "KNN": {
+      "CV F1 (mean)": 0.906,
+      "CV F1 (std)": 0.0086,
+      "Accuracy": 0.7983,
+      "Precision": 0.917,
+      "Recall": 0.3896,
+      "F1": 0.5469,
+      "ROC-AUC": 0.8471,
+      "Waktu training (s)": 0.0429
+    },
+    "Logistic Regression": {
+      "CV F1 (mean)": 0.9688,
+      "CV F1 (std)": 0.0022,
+      "Accuracy": 0.9739,
+      "Precision": 0.966,
+      "Recall": 0.9499,
+      "F1": 0.9579,
+      "ROC-AUC": 0.9954,
+      "Waktu training (s)": 0.0418
+    },
+    "Voting (5 model)": {
+      "CV F1 (mean)": null,
+      "CV F1 (std)": null,
+      "Accuracy": 0.978,
+      "Precision": 0.9596,
+      "Recall": 0.9703,
+      "F1": 0.9649,
+      "ROC-AUC": 0.9971,
+      "Waktu training (s)": 10.8404
+    }
+  },
+  "model_terbaik_f1": "SVM",
+  "voting": "prediksi 1 jika >= 3 dari 5 model memprediksi 1",
+  "token_sinyal": {
+    "xxfancy": "huruf/angka gaya (bold, italic, fullwidth, circled) yang dinormalisasi NFKC",
+    "xxhomoglyph": "huruf Cyrillic/Yunani yang menyamar di dalam kata Latin",
+    "xxspaced": "huruf yang dipisah spasi, mis. 'P L U T O 8 8'",
+    "xxdecor": "simbol dekoratif non-ASCII selain emoji, mis. blok/bintang/aksara asing"
+  },
+  "eksperimen_cleaning": {
+    "A. Kata, tanpa sinyal": {
+      "F1 (uji biasa)": 0.9519,
+      "False positive": 27.0,
+      "Recall samaran bold": 0.9536,
+      "Recall samaran homoglif": 0.9536,
+      "Recall samaran spasi": 0.9638
+    },
+    "B. Kata + sinyal (default)": {
+      "F1 (uji biasa)": 0.9579,
+      "False positive": 18.0,
+      "Recall samaran bold": 0.9981,
+      "Recall samaran homoglif": 0.9907,
+      "Recall samaran spasi": 0.9783
+    },
+    "C. Karakter, cleaning minimal": {
+      "F1 (uji biasa)": 0.9643,
+      "False positive": 12.0,
+      "Recall samaran bold": 0.6252,
+      "Recall samaran homoglif": 0.8683,
+      "Recall samaran spasi": 0.942
+    },
+    "D. Gabungan B + C": {
+      "F1 (uji biasa)": 0.9777,
+      "False positive": 10.0,
+      "Recall samaran bold": 0.9963,
+      "Recall samaran homoglif": 0.9814,
+      "Recall samaran spasi": 0.9855
+    }
+  },
+  "model_gabungan": "gabungan_kata_karakter.joblib - input DataFrame(text_clean=clean_text(x), text_min=light_clean(x))",
+  "versi": {
+    "python": "3.12.16",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4"
+  }
+}
