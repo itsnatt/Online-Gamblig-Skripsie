@@ -14,3 +14,4 @@ kagglehub
 youtube-comment-downloader
 google-api-python-client
 pyarrow
+anyascii

@@ -1,17 +1,17 @@
 {
-  "dibuat": "2026-10-27T15:44:40",
+  "dibuat": "2026-10-27T16:42:24",
   "dataset": "kaggle: yaemico/judionline",
-  "kolom_teks": "komentar -> clean_text()",
-  "catatan_penting": "Pipeline menerima teks yang SUDAH dibersihkan dengan clean_text() yang sama.",
+  "kolom_teks": "komentar -> siapkan_input() -> kolom text_clean, sinyal, text_min",
+  "catatan_penting": "Semua pipeline menerima DataFrame hasil siapkan_input() (fungsi cleaning yang sama).",
   "jumlah_data": {
     "awal": 10230,
-    "setelah_dedup": 8624,
-    "train_sebelum_balancing": 6899,
-    "train_setelah_balancing": 4312,
-    "test": 1725,
+    "setelah_dedup": 8753,
+    "train_sebelum_balancing": 7002,
+    "train_setelah_balancing": 4460,
+    "test": 1751,
     "test_distribusi_label": {
-      "0": 1186,
-      "1": 539
+      "0": 1193,
+      "1": 558
     }
   },
   "vectorizer": {
@@ -61,7 +61,7 @@
       "min_samples_split": "5",
       "min_weight_fraction_leaf": "0.0",
       "monotonic_cst": "None",
-      "n_estimators": "100",
+      "n_estimators": "200",
       "n_jobs": "-1",
       "oob_score": "False",
       "random_state": "42",
@@ -97,105 +97,130 @@
   },
   "metrik_uji": {
     "Naive Bayes": {
-      "CV F1 (mean)": 0.9294,
-      "CV F1 (std)": 0.0091,
-      "Accuracy": 0.9032,
-      "Precision": 0.7665,
-      "Recall": 0.9926,
-      "F1": 0.865,
-      "ROC-AUC": 0.9943,
-      "Waktu training (s)": 0.0385
+      "CV F1 (mean)": 0.9553,
+      "CV F1 (std)": 0.0048,
+      "Accuracy": 0.9377,
+      "Precision": 0.8427,
+      "Recall": 0.9892,
+      "F1": 0.9101,
+      "ROC-AUC": 0.9949,
+      "Waktu training (s)": 0.0297
     },
     "SVM": {
-      "CV F1 (mean)": 0.9758,
-      "CV F1 (std)": 0.0024,
-      "Accuracy": 0.9751,
-      "Precision": 0.9444,
-      "Recall": 0.9777,
-      "F1": 0.9608,
-      "ROC-AUC": 0.9963,
-      "Waktu training (s)": 4.7789
+      "CV F1 (mean)": 0.9802,
+      "CV F1 (std)": 0.0011,
+      "Accuracy": 0.9846,
+      "Precision": 0.9784,
+      "Recall": 0.9731,
+      "F1": 0.9757,
+      "ROC-AUC": 0.998,
+      "Waktu training (s)": 3.0186
     },
     "Random Forest": {
-      "CV F1 (mean)": 0.9741,
-      "CV F1 (std)": 0.0045,
-      "Accuracy": 0.9751,
-      "Precision": 0.9542,
-      "Recall": 0.9666,
-      "F1": 0.9604,
-      "ROC-AUC": 0.995,
-      "Waktu training (s)": 5.9383
+      "CV F1 (mean)": 0.9791,
+      "CV F1 (std)": 0.0013,
+      "Accuracy": 0.9817,
+      "Precision": 0.973,
+      "Recall": 0.9695,
+      "F1": 0.9713,
+      "ROC-AUC": 0.9975,
+      "Waktu training (s)": 5.4512
     },
     "KNN": {
-      "CV F1 (mean)": 0.906,
-      "CV F1 (std)": 0.0086,
-      "Accuracy": 0.7983,
-      "Precision": 0.917,
-      "Recall": 0.3896,
-      "F1": 0.5469,
-      "ROC-AUC": 0.8471,
-      "Waktu training (s)": 0.0429
+      "CV F1 (mean)": 0.9419,
+      "CV F1 (std)": 0.005,
+      "Accuracy": 0.9081,
+      "Precision": 0.9606,
+      "Recall": 0.7419,
+      "F1": 0.8372,
+      "ROC-AUC": 0.9268,
+      "Waktu training (s)": 0.0437
     },
     "Logistic Regression": {
-      "CV F1 (mean)": 0.9688,
-      "CV F1 (std)": 0.0022,
-      "Accuracy": 0.9739,
-      "Precision": 0.966,
-      "Recall": 0.9499,
-      "F1": 0.9579,
-      "ROC-AUC": 0.9954,
-      "Waktu training (s)": 0.0418
+      "CV F1 (mean)": 0.9635,
+      "CV F1 (std)": 0.004,
+      "Accuracy": 0.9772,
+      "Precision": 0.9832,
+      "Recall": 0.9444,
+      "F1": 0.9634,
+      "ROC-AUC": 0.9966,
+      "Waktu training (s)": 0.057
     },
     "Voting (5 model)": {
       "CV F1 (mean)": null,
       "CV F1 (std)": null,
-      "Accuracy": 0.978,
-      "Precision": 0.9596,
-      "Recall": 0.9703,
-      "F1": 0.9649,
-      "ROC-AUC": 0.9971,
-      "Waktu training (s)": 10.8404
+      "Accuracy": 0.9834,
+      "Precision": 0.9818,
+      "Recall": 0.9659,
+      "F1": 0.9738,
+      "ROC-AUC": 0.9972,
+      "Waktu training (s)": 8.6002
     }
   },
   "model_terbaik_f1": "SVM",
   "voting": "prediksi 1 jika >= 3 dari 5 model memprediksi 1",
   "token_sinyal": {
-    "xxfancy": "huruf/angka gaya (bold, italic, fullwidth, circled) yang dinormalisasi NFKC",
-    "xxhomoglyph": "huruf Cyrillic/Yunani yang menyamar di dalam kata Latin",
+    "xxfancy": "huruf gaya: bold/italic/fullwidth, small caps, huruf-emoji (huruf dalam kotak), huruf bendera berurutan",
+    "xxhomoglyph": "huruf aksara lain yang bentuknya mirip Latin (Cyrillic, Yunani, Armenia, Cherokee, ...)",
     "xxspaced": "huruf yang dipisah spasi, mis. 'P L U T O 8 8'",
-    "xxdecor": "simbol dekoratif non-ASCII selain emoji, mis. blok/bintang/aksara asing"
+    "xxdecor": "simbol non-ASCII selain emoji, mis. blok, bintang, kurung dekoratif",
+    "xxleet": "leetspeak: angka di tengah huruf (m4xw1n, sl0t - teksnya TIDAK diubah) atau $ sebagai s",
+    "xxinvisible": "karakter tak terlihat (zero-width space, dsb.) yang diselipkan untuk memecah kata"
   },
   "eksperimen_cleaning": {
+    "0. Cleaning v1 (sebelumnya)": {
+      "F1 (uji biasa)": 0.9718,
+      "False positive": 8.0,
+      "Recall samaran bold": 0.9982,
+      "Recall samaran homoglif": 0.991,
+      "Recall samaran homoglif campuran": 0.9659,
+      "Recall samaran small caps": 0.8208,
+      "Recall samaran spasi": 0.9928,
+      "Recall samaran huruf-emoji": 0.9928
+    },
     "A. Kata, tanpa sinyal": {
-      "F1 (uji biasa)": 0.9519,
-      "False positive": 27.0,
-      "Recall samaran bold": 0.9536,
-      "Recall samaran homoglif": 0.9536,
-      "Recall samaran spasi": 0.9638
+      "F1 (uji biasa)": 0.9603,
+      "False positive": 18.0,
+      "Recall samaran bold": 0.9534,
+      "Recall samaran homoglif": 0.9534,
+      "Recall samaran homoglif campuran": 0.9534,
+      "Recall samaran small caps": 0.9534,
+      "Recall samaran spasi": 0.9928,
+      "Recall samaran huruf-emoji": 0.9928
     },
     "B. Kata + sinyal (default)": {
-      "F1 (uji biasa)": 0.9579,
-      "False positive": 18.0,
-      "Recall samaran bold": 0.9981,
-      "Recall samaran homoglif": 0.9907,
-      "Recall samaran spasi": 0.9783
+      "F1 (uji biasa)": 0.9634,
+      "False positive": 9.0,
+      "Recall samaran bold": 1.0,
+      "Recall samaran homoglif": 0.9982,
+      "Recall samaran homoglif campuran": 0.9982,
+      "Recall samaran small caps": 1.0,
+      "Recall samaran spasi": 1.0,
+      "Recall samaran huruf-emoji": 1.0
     },
     "C. Karakter, cleaning minimal": {
-      "F1 (uji biasa)": 0.9643,
-      "False positive": 12.0,
-      "Recall samaran bold": 0.6252,
-      "Recall samaran homoglif": 0.8683,
-      "Recall samaran spasi": 0.942
+      "F1 (uji biasa)": 0.9634,
+      "False positive": 8.0,
+      "Recall samaran bold": 0.3996,
+      "Recall samaran homoglif": 0.8763,
+      "Recall samaran homoglif campuran": 0.9301,
+      "Recall samaran small caps": 0.7599,
+      "Recall samaran spasi": 0.9638,
+      "Recall samaran huruf-emoji": 0.913
     },
     "D. Gabungan B + C": {
-      "F1 (uji biasa)": 0.9777,
-      "False positive": 10.0,
-      "Recall samaran bold": 0.9963,
-      "Recall samaran homoglif": 0.9814,
-      "Recall samaran spasi": 0.9855
+      "F1 (uji biasa)": 0.9745,
+      "False positive": 6.0,
+      "Recall samaran bold": 1.0,
+      "Recall samaran homoglif": 0.9928,
+      "Recall samaran homoglif campuran": 0.9946,
+      "Recall samaran small caps": 1.0,
+      "Recall samaran spasi": 1.0,
+      "Recall samaran huruf-emoji": 1.0
     }
   },
-  "model_gabungan": "gabungan_kata_karakter.joblib - input DataFrame(text_clean=clean_text(x), text_min=light_clean(x))",
+  "model_gabungan": "gabungan_kata_karakter.joblib - input sama: siapkan_input(teks)",
+  "fitur": "TF-IDF(text_clean, max_features=5000) + biner(sinyal); model gabungan + TF-IDF karakter(text_min)",
   "versi": {
     "python": "3.12.16",
     "scikit-learn": "1.9.1",
