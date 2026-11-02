@@ -1,0 +1,53 @@
+jenis,komentar,komentar_clean,label,prediksi,skor
+FP (normal -> promosi),"Sepakat, auto menang😁","sepakat , auto menang",0,1,1.659745274565298
+FP (normal -> promosi),Perlu dinominasikan sebagai pendongeng terbaik,dinominasikan pendongeng terbaik,0,1,0.8362437754555796
+FP (normal -> promosi),ngurusnya gampang ? ? ? naaaahhhh silakan .... opini2,ngurusnya gampang ? ? ? naaaahhhh silakan .... opini2,0,1,0.6959544078230024
+FP (normal -> promosi),mamang bener,mamang bener,0,1,0.5017124327660876
+FP (normal -> promosi),Salam dari jwaselatan,salam jwaselatan,0,1,0.47385973588342073
+FP (normal -> promosi),"trending sih inii , gua","trending sih inii , gua",0,1,0.36744882144205643
+FP (normal -> promosi),Bisa kalah atau bisa menang?,kalah menang ?,0,1,0.308916045370985
+FP (normal -> promosi),asyik banget,asyik banget,0,1,0.29083554820600305
+FP (normal -> promosi),gercep banget,gercep banget,0,1,0.25718779185110335
+FP (normal -> promosi),modal bansos & hidup mulyono,modal bansos & hidup mulyono,0,1,0.24649973688997856
+FP (normal -> promosi),udah yaa main ksatria ksatriaannya 😸😸,udah yaa main ksatria ksatriaannya,0,1,0.2396365250777816
+FP (normal -> promosi),"Bang cobain bikin cumi darat dongs, main diesel kali²🤭🤭","bang cobain bikin cumi darat dongs , main diesel kali²",0,1,0.19822108385934395
+FP (normal -> promosi),Bikin emosi dari detik pertama.,bikin emosi detik .,0,1,0.18990679960150114
+FP (normal -> promosi),​ @sandymartono7029  jiakhhh raiso nimpali langsung nisuhi Wong 😂,​ jiakhhh raiso nimpali langsung nisuhi,0,1,0.16694891651105015
+FP (normal -> promosi),Mengecewakan,mengecewakan,0,1,0.15569930811887456
+FP (normal -> promosi),"untung gak remap , kerjanya","untung gak remap , kerjanya",0,1,0.15089355604081267
+FP (normal -> promosi),"di atas sultan masih ada sultan,","sultan sultan ,",0,1,0.11878156248245875
+FP (normal -> promosi),gas main v8🔥🔥,gas main v8,0,1,0.08142069988261602
+FP (normal -> promosi),gila p3 manual counter steering,gila p3 manual counter steering,0,1,0.06719492251022796
+FP (normal -> promosi),"​ @jeffproit 
+Wahh iki  bener",​ wahh iki bener,0,1,0.03510992739261132
+FP (normal -> promosi),Utang sit oleh ra ki😂,utang sit ra ki,0,1,0.03475356502627269
+FP (normal -> promosi),"Dapet notif skakmat ahok, auto klik 💪","dapet notif skakmat ahok , auto klik",0,1,0.026118186508504837
+FP (normal -> promosi),Nggak pantes buat dilihat,nggak pantes,0,1,0.02092813141811445
+FP (normal -> promosi),Emang bandungnya dmna ini?,emang bandungnya dmna ?,0,1,0.0192406688966541
+FP (normal -> promosi),Jangan spoiler  biar yang lain bisa penasaran,spoiler biar penasaran,0,1,0.007924495536073828
+FP (normal -> promosi),2jm nyampai gw .,2jm nyampai gw .,0,1,0.007794077997008264
+FP (normal -> promosi),Terima kasih bang🙏,terima kasih bang,0,1,0.0005440091974826533
+FP (normal -> promosi),"terima kasih banyak, bang 🙌","terima kasih , bang",0,1,0.0005440091974826533
+FN (promosi lolos),alhamdulillah aku kena dough В𝒪Ꮤ𝒪𝟩𝟩 250k bobol,alhamdulillah kena dough в𝒪ꮤ𝒪𝟩𝟩 250k bobol,1,0,-0.6437678126678879
+FN (promosi lolos),Ya allah semoga yang komentar promosi dora77 di panggil oleh mu secepat . Amin,ya allah semoga komentar promosi dora77 panggil mu secepat . amin,1,0,-0.5656195050557663
+FN (promosi lolos),░M𝑨 N 𝑼 𝑻88░ selalu jadi alternatif yang pas untuk menghidupi keluargaku,░m𝑨 n 𝑼 𝑻88░ alternatif pas menghidupi keluargaku,1,0,-0.52953259239595
+FN (promosi lolos),"2:12 bedehhh body nya gaada lawan, semoga BERKAH 99 terus ya ka channel nya","2:12 bedehhh body nya gaada lawan , semoga berkah 99 ya ka channel nya",1,0,-0.5183085384177212
+FN (promosi lolos),top mantap is the best bang rifatq,top mantap is the best bang rifatq,1,0,-0.2554908102797594
+FN (promosi lolos),suka strada old,suka strada old,1,0,-0.2499364017098957
+FN (promosi lolos),"ngeri , sepupu gue smp aja tau p͟͟u͟͟l͟͟a͟͟u͟͟w͟͟i͟͟n͟͟ .","ngeri , sepupu gue smp aja tau p͟͟u͟͟l͟͟a͟͟u͟͟w͟͟i͟͟n͟͟ .",1,0,-0.24952740197470594
+FN (promosi lolos),𝕄𝘼 𝑵 𝐔 𝑻 8 8...Gachoor parah geeeeess,𝕄𝘼 𝑵 𝐔 𝑻 8 8 ... gachoor parah geeeeess,1,0,-0.223109034423149
+FN (promosi lolos),explore pulau papua ..,explore pulau papua ..,1,0,-0.2217888664600436
+FN (promosi lolos),dah ah tobat gk maengaruda-hoki lg abis maxwin,dah ah tobat gk maengaruda-hoki lg abis maxwin,1,0,-0.17424024194414914
+FN (promosi lolos),Mulai langkah baru di 2:34 M𝗮𝘯𝐝𝗮𝑙𝗶𝒌𝐚𝟟𝟳,langkah 2:34 m𝗮𝘯𝐝𝗮𝑙𝗶𝒌𝐚𝟟𝟳,1,0,-0.17421990416762811
+FN (promosi lolos),"Gue nyari resep mie goreng, yang keluar malah iklan P͟͟U͟͟L͟͟A͟͟U͟͟W͟͟I͟͟N͟͟.","gue nyari resep mie goreng , iklan p͟͟u͟͟l͟͟a͟͟u͟͟w͟͟i͟͟n͟͟ .",1,0,-0.16260600174630147
+FN (promosi lolos),M_A_N_D_A_L_I_K_A_7_7 selalu tampil dengan fitur baru,m_a_n_d_a_l_i_k_a_7_7 tampil fitur,1,0,-0.14785091643613896
+FN (promosi lolos),"Bnyk yg berkomentar Mandalika 77 apaan si, jujur Gua nanya...","bnyk yg berkomentar mandalika 77 si , jujur gua nanya ...",1,0,-0.11146814263267013
+FN (promosi lolos),pro aja bang 𝐒𝐆𝐈𝟖𝟖,pro aja bang 𝐒𝐆𝐈𝟖𝟖,1,0,-0.09056639174714573
+FN (promosi lolos),"65inch aja udah gede bener , jir","65inch aja udah gede bener , jir",1,0,-0.08494997547118704
+FN (promosi lolos),ꗥ𝙈𝘼𝙉𝙐𝙏88ꗥ merubah kehidupanmu menjadi lebih matang,ꗥ𝙈𝘼𝙉𝙐𝙏88ꗥ merubah kehidupanmu matang,1,0,-0.08093847745640276
+FN (promosi lolos),"permainan tenang , hasil . salute player 𝗣 𝗟 𝗨 𝗧 𝗢 𝟴 𝟴","permainan tenang , hasil . salute player 𝗣 𝗟 𝗨 𝗧 𝗢 𝟴 𝟴",1,0,-0.06882690711919012
+FN (promosi lolos),suka aston martin sd kali lihat db8 graz,suka aston martin sd kali lihat db8 graz,1,0,-0.06683886906288988
+FN (promosi lolos),А𝐗𝐿𝟳7𝟽 menyediakan ruang untuk kompetisi yang sehat.,а𝐗𝐿𝟳7𝟽 menyediakan ruang kompetisi sehat .,1,0,-0.05527441931212557
+FN (promosi lolos),𝐏 𝐋 𝐔 𝐓 𝐎 𝟖 𝟖 mdal udah gaciirr abis,𝐏 𝐋 𝐔 𝐓 𝐎 𝟖 𝟖 mdal udah gaciirr abis,1,0,-0.03146056072727774
+FN (promosi lolos),orang trump menang pilpres ya,orang trump menang pilpres ya,1,0,-0.01315282325190592
+FN (promosi lolos),06:30 P U L A U W I N bahaya buat orang ketagihan,06:30 p u l a u w i n bahaya orang ketagihan,1,0,-0.0015126332835821987

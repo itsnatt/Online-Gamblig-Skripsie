@@ -1,0 +1,4 @@
+Label,Latih (sebelum undersampling),Latih (sesudah undersampling),Uji
+Normal (0),4576,2040,1144
+Promosi judi (1),2040,2040,510
+Total,6616,4080,1654
